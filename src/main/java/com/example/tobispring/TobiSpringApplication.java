@@ -2,8 +2,6 @@ package com.example.tobispring;
 
 import com.example.tobispring.user.dao.UserDao;
 import com.example.tobispring.user.domain.User;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //@SpringBootApplication
 public class TobiSpringApplication {
