@@ -1,6 +1,5 @@
 package com.example.tobispring;
 
-import com.example.tobispring.user.dao.NUserDao;
 import com.example.tobispring.user.dao.UserDao;
 import com.example.tobispring.user.domain.User;
 
@@ -10,7 +9,7 @@ public class TobiSpringApplication {
 		//SpringApplication.run(TobiSpringApplication.class, args);
 
 		// D사의 DB 커넥션을 수정하여 적용시킨 UserDao다.
-		UserDao dao = new NUserDao();
+		UserDao dao = new UserDao() ;
 
 		// 유저 정보
 		User testUser = new User();
