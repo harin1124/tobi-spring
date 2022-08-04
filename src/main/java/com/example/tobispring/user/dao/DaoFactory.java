@@ -9,14 +9,18 @@ public class DaoFactory {
 		초난감 DAO의 코드에서 getConnection 메소드를 따로 만들어 DB 연결 기능을 분리해내는 메소드를 만드는 방법을 사용한다.
 	*/
 	public UserDao userDao(){
-		return new UserDao(new DConnectionMaker());
+		return new UserDao(connectionMaker());
 	}
 
 	public AccountDao accountDao(){
-		return new AccountDao(new DConnectionMaker());
+		return new AccountDao(connectionMaker());
 	}
 
 	public MessageDao messageDao(){
-		return new MessageDao(new DConnectionMaker());
+		return new MessageDao(connectionMaker());
+	}
+
+	public ConnectionMaker connectionMaker(){
+		return new DConnectionMaker();
 	}
 }
