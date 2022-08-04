@@ -2,13 +2,16 @@ package com.example.tobispring.user.dao;
 
 import com.example.tobispring.user.domain.User;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class UserDao {
+public class MessageDao {
 	private ConnectionMaker connectionMaker;
 
 	// ConnectionMaker 구현 클래스는 UserDao의 클라이언트에게 넘기도록 구현되었다.
-	public UserDao(ConnectionMaker connectionMaker){
+	public MessageDao(ConnectionMaker connectionMaker){
 		this.connectionMaker = connectionMaker;
 	}
 
