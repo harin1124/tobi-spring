@@ -10,7 +10,6 @@ import java.sql.SQLException;
 public class MessageDao {
 	private ConnectionMaker connectionMaker;
 
-	// ConnectionMaker 구현 클래스는 UserDao의 클라이언트에게 넘기도록 구현되었다.
 	public MessageDao(ConnectionMaker connectionMaker){
 		this.connectionMaker = connectionMaker;
 	}
