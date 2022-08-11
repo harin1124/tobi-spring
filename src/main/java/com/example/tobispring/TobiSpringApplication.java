@@ -32,6 +32,9 @@ public class TobiSpringApplication {
 			동일 객체로 확인된다.
 
 			스프링은 여러 번 빈을 요청해도 항상 동일한 오브젝트를 돌려준다.
+
+			=> 스프링은 대부분 서버환경에서 사용되고, 서블릿은 자바 엔터프라이즈 기술의 가장 기본이 되는 서비스 오브젝트.
+			서블릿은 멀티스레드 환경에서 싱글톤으로 동작하여, 스레드에서 하나의 오브젝트를 공유해 동시 사용한다.
 		*/
 		ApplicationContext context = new AnnotationConfigApplicationContext(DaoFactory.class);
 
