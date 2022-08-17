@@ -36,7 +36,7 @@ public class UserDao {
 	private static UserDao INSTANCE;
 	private ConnectionMaker connectionMaker;
 
-	private UserDao(ConnectionMaker connectionMaker){
+	UserDao(ConnectionMaker connectionMaker){
 		this.connectionMaker = connectionMaker;
 	}
 
