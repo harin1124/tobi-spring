@@ -3,7 +3,7 @@ package com.example.tobispring.user.dao;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class UserDaoConnectionCountingTest {
-	public public static void main(String[] args) {
+	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext((CountingDaoFactory.class));
 		UserDao dao = context.getBean("userDao", UserDao.class);
 
