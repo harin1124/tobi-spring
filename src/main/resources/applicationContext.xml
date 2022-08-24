@@ -5,12 +5,19 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
 >
 
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="org.mariadb.jdbc.Driver"/>
+		<property name="url" value="jdbc:mariadb://localhost:3306/DB명"/>
+		<property name="username" value="유저명"/>
+		<property name="password" value="비밀번호"/>
+	</bean>
+
 	<!-- 만약 개발용, 운영용 커넥션 메이커가 다르다면 다음과 같이 지정하고, id를 아래의 property[name=connectionMaker] 의 ref에 값만 바꿔주면 된다.-->
 	<!--<bean id="testDBConnectionMaker" class="TestDBConnectionMaker"/>-->
 	<!--<bean id="productDBConnectionMaker" class="ProductDBConnectionMaker"/>-->
 
-	<bean id="connectionMaker" class="com.example.tobispring.user.dao.DConnectionMaker"/>
+	<!--<bean id="dataSource" class="com.example.tobispring.user.dao.DConnectionMaker"/>-->
 	<bean id="userDao" class="com.example.tobispring.user.dao.UserDao">
-		<property name="connectionMaker" ref="connectionMaker"/> <!-- 여기 connectionMaker 는 DConnectionMaker 를 참조하는 bean id를 일컫는 것 -->
+		<property name="dataSource" ref="dataSource"/>
 	</bean>
 </beans>
