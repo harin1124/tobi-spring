@@ -17,6 +17,11 @@ public class UserDao {
 		Connection c = dataSource.getConnection();
 	}
 
+	public User get(String userId) throws SQLException {
+		Connection c = dataSource.getConnection();
+		return null;
+	}
+
 	public UserDao(){
 
 	}
