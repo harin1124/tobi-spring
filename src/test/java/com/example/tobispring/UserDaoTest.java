@@ -20,18 +20,15 @@ public class UserDaoTest {
 		UserDao dao = context.getBean("userDao", UserDao.class);
 
 		User user = new User();
-		user.setId("user");
-		user.setName("myName");
-		user.setPassword("myPassword");
+		user.setId("james01");
+		user.setName("james01");
+		user.setPassword("james01");
 
 		dao.add(user);
 
-		System.out.println(user.getId() + " 등록 성공");
-
 		User user2 = dao.get(user.getId());
-		System.out.println(user2.getName());
-		System.out.println(user2.getPassword());
 
-		System.out.println(user2.getId()+" 조회 성공");
+		assertEquals(user2.getName(), user.getName());
+		assertEquals(user2.getPassword(), user.getPassword());
 	}
 }
